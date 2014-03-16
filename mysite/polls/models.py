@@ -6,6 +6,6 @@ class Poll(models.Model):
     pub_date = models.DateTimeField('date published') # DateField表示日期类型的字段。
 
 class Choice(models.Model):
-    poll = models.ForeinKey(Poll)
+    poll = models.ForeignKey(Poll)
     choice = models.CharField(max_length=200)
     votes = models.IntegerField()
